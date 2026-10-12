@@ -171,52 +171,58 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
               {/* Animated shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/20 to-emerald-400/0 animate-pulse" />
-              <PackageCheck className="w-4 h-4 text-white shrink-0" />
-              <span>Retrieve Serviced Loupe from Locker #04</span>
+              <PackageCheck className="w-4 h-4 text-white shrink-0 animate-bounce" />
+              <span className="relative z-10">Retrieve Serviced Loupe from Locker #04</span>
             </button>
           ) : isInServicing ? (
             <button
               onClick={onViewTracker}
-              className="w-full h-12 bg-[#007AFF] hover:bg-blue-600 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
+              className="relative w-full h-12 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xl shadow-blue-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 overflow-hidden group/btn"
             >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0 animate-pulse" />
               <RotateCw className="w-4 h-4 animate-spin text-white shrink-0" />
-              <span>Track Live Clean-Room Servicing ➔</span>
+              <span className="relative z-10">Track Live Clean-Room Servicing ➔</span>
             </button>
           ) : (
             <button
               onClick={onOpenLockerModal}
-              className="w-full h-12 bg-[#007AFF] hover:bg-blue-600 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
+              className="relative w-full h-12 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 hover:from-blue-700 hover:via-cyan-700 hover:to-teal-700 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xl shadow-blue-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 overflow-hidden group/btn"
             >
-              <Lock className="w-4 h-4 text-white shrink-0" />
-              <span>Drop-off Loupe at Campus Smart Locker</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
+              <Lock className="w-4 h-4 text-white shrink-0 relative z-10" />
+              <span className="relative z-10">Drop-off Loupe at Campus Smart Locker</span>
             </button>
           )}
         </div>
 
-        {/* 3 Solid Secondary Action Buttons - Clean Symmetrical Grid */}
+        {/* Glassmorphic Secondary Action Buttons with 3D effects */}
         <div className="grid grid-cols-3 gap-2 mt-2.5 text-xs">
           <button
             onClick={onOpenInspectionModal}
-            className="h-11 px-2 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-xs active:scale-[0.98]"
+            className="relative group/sec h-11 px-2 bg-gradient-to-br from-amber-50/80 to-orange-50/80 backdrop-blur-sm hover:from-amber-100/90 hover:to-orange-100/90 text-slate-800 border border-amber-200/50 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-sm hover:shadow-md hover:shadow-amber-200/50 active:scale-95 overflow-hidden"
           >
-            <Camera className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-            <span className="truncate">10-Pt Scan</span>
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/10 opacity-0 group-hover/sec:opacity-100 transition-opacity" />
+            <Camera className="w-3.5 h-3.5 text-amber-600 shrink-0 relative z-10 group-hover/sec:scale-110 transition-transform" />
+            <span className="truncate relative z-10">10-Pt Scan</span>
           </button>
           
           <button
             onClick={onOpenLoanerModal}
-            className="h-11 px-2 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-xs active:scale-[0.98]"
+            className="relative group/sec h-11 px-2 bg-gradient-to-br from-purple-50/80 to-pink-50/80 backdrop-blur-sm hover:from-purple-100/90 hover:to-pink-100/90 text-slate-800 border border-purple-200/50 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-sm hover:shadow-md hover:shadow-purple-200/50 active:scale-95 overflow-hidden"
           >
-            <Glasses className="w-3.5 h-3.5 text-purple-600 shrink-0" />
-            <span className="truncate">Backup Fleet</span>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/10 opacity-0 group-hover/sec:opacity-100 transition-opacity" />
+            <Glasses className="w-3.5 h-3.5 text-purple-600 shrink-0 relative z-10 group-hover/sec:scale-110 transition-transform" />
+            <span className="truncate relative z-10">Backup Fleet</span>
           </button>
           
           <button
             onClick={onOpenCertificateModal}
-            className="h-11 px-2 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-xs active:scale-[0.98]"
+            className="relative group/sec h-11 px-2 bg-gradient-to-br from-emerald-50/80 to-teal-50/80 backdrop-blur-sm hover:from-emerald-100/90 hover:to-teal-100/90 text-slate-800 border border-emerald-200/50 rounded-2xl font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer text-center shadow-sm hover:shadow-md hover:shadow-emerald-200/50 active:scale-95 overflow-hidden"
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span className="truncate">MOH Pass</span>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-emerald-500/10 opacity-0 group-hover/sec:opacity-100 transition-opacity" />
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0 relative z-10 group-hover/sec:scale-110 transition-transform" />
+            <span className="truncate relative z-10">MOH Pass</span>
           </button>
         </div>
 
