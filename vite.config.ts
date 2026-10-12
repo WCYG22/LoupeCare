@@ -127,5 +127,15 @@ export default defineConfig(() => {
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
+    preview: {
+      port: 10000,
+      host: '0.0.0.0',
+      strictPort: true,
+      allowedHosts: [
+        'loupecare.onrender.com',
+        '.onrender.com',
+        'localhost',
+      ],
+    },
   };
 });
