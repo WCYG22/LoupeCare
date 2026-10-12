@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#99f6e4" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#042f2e" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Outer Protective Medical Ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-dasharray="12 8" opacity="0.4" />
+
+  <!-- Shield Shape -->
+  <path d="M256 90 L370 140 C370 250 256 340 256 340 C256 340 142 250 142 140 Z" fill="#ffffff" fill-opacity="0.12" filter="url(#shadow)" />
+
+  <!-- Surgical Loupe Optical Bar & Dual Barrel Lenses -->
+  <g transform="translate(0, 20)">
+    <!-- Bridge Titanium Frame -->
+    <path d="M190 220 Q 256 200 322 220" stroke="#f0fdfa" stroke-width="14" stroke-linecap="round" fill="none" />
+    <circle cx="256" cy="208" r="8" fill="#5eead4" />
+
+    <!-- Left Barrel Lens -->
+    <g transform="translate(170, 240)">
+      <circle cx="0" cy="0" r="54" fill="#042f2e" stroke="#ccfbf1" stroke-width="8" />
+      <circle cx="0" cy="0" r="42" fill="url(#lensGrad)" />
+      <ellipse cx="-12" cy="-12" rx="16" ry="8" fill="#ffffff" opacity="0.8" transform="rotate(-30 -12 -12)" />
+      <!-- Crosshair / reticle -->
+      <line x1="-16" y1="0" x2="16" y2="0" stroke="#0f766e" stroke-width="2" opacity="0.6" />
+      <line x1="0" y1="-16" x2="0" y2="16" stroke="#0f766e" stroke-width="2" opacity="0.6" />
+    </g>
+
+    <!-- Right Barrel Lens -->
+    <g transform="translate(342, 240)">
+      <circle cx="0" cy="0" r="54" fill="#042f2e" stroke="#ccfbf1" stroke-width="8" />
+      <circle cx="0" cy="0" r="42" fill="url(#lensGrad)" />
+      <ellipse cx="-12" cy="-12" rx="16" ry="8" fill="#ffffff" opacity="0.8" transform="rotate(-30 -12 -12)" />
+      <!-- Crosshair / reticle -->
+      <line x1="-16" y1="0" x2="16" y2="0" stroke="#0f766e" stroke-width="2" opacity="0.6" />
+      <line x1="0" y1="-16" x2="0" y2="16" stroke="#0f766e" stroke-width="2" opacity="0.6" />
+    </g>
+
+    <!-- Center Precision Medical Cross -->
+    <g transform="translate(256, 270)">
+      <rect x="-8" y="-24" width="16" height="48" rx="5" fill="#2dd4bf" />
+      <rect x="-24" y="-8" width="48" height="16" rx="5" fill="#2dd4bf" />
+    </g>
+  </g>
+
+  <!-- Typography "LC" Badge at bottom -->
+  <text x="256" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#ccfbf1" text-anchor="middle" letter-spacing="4">LOUPÈCARE</text>
+</svg>

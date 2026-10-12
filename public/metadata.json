@@ -1,0 +1,6 @@
+{
+  "name": "LoupeCare - Clinical Optical Maintenance & Practice Management Portal",
+  "description": "Technical Specification, Operational Blueprint & Practice Management Platform for Dental Surgical Optics Maintenance, IoT Smart Lockers & MOH Biosecurity Compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
