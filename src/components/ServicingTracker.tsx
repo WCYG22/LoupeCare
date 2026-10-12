@@ -77,22 +77,26 @@ export const ServicingTracker: React.FC<ServicingTrackerProps> = ({
             // Distinct solid theme per stage
             const stageThemes = {
               1: {
-                name: 'Intake Scan',
+                name: 'Intake',
+                subtitle: 'Scan',
                 activeBorder: 'ring-2 ring-blue-500 border-blue-400 bg-blue-50 text-blue-950',
                 badgeBg: 'text-blue-600'
               },
               2: {
-                name: 'Ultrasonic Decon',
+                name: 'Ultrasonic',
+                subtitle: 'Clean',
                 activeBorder: 'ring-2 ring-purple-500 border-purple-400 bg-purple-50 text-purple-950',
                 badgeBg: 'text-purple-600'
               },
               3: {
-                name: 'Nano-Bonding',
+                name: 'Nano-Coat',
+                subtitle: 'Bond',
                 activeBorder: 'ring-2 ring-amber-500 border-amber-400 bg-amber-50 text-amber-950',
                 badgeBg: 'text-amber-600'
               },
               4: {
-                name: 'Torque Return',
+                name: 'Calibrate',
+                subtitle: 'Return',
                 activeBorder: 'ring-2 ring-emerald-500 border-emerald-400 bg-emerald-50 text-emerald-950',
                 badgeBg: 'text-emerald-600'
               }
@@ -104,20 +108,27 @@ export const ServicingTracker: React.FC<ServicingTrackerProps> = ({
               <button
                 key={stage.id}
                 onClick={() => setSelectedStageId(stage.id)}
-                className={`h-[68px] flex flex-col justify-between p-2.5 sm:p-3 rounded-2xl border text-left transition-all cursor-pointer shadow-xs active:scale-[0.98] ${
+                className={`h-[70px] flex flex-col justify-between p-2.5 rounded-2xl border text-left transition-all cursor-pointer shadow-xs active:scale-[0.98] ${
                   isSelected
                     ? theme.activeBorder
-                    : 'border-slate-200 hover:border-slate-300 bg-slate-50'
+                    : 'border-slate-200 hover:border-slate-300 bg-white'
                 }`}
               >
-                <div className="flex items-center justify-between text-[11px] font-mono font-bold">
-                  <span className={isSelected ? 'text-slate-900 font-black' : 'text-slate-400'}>0{stage.id}</span>
+                <div className="flex items-center justify-between">
+                  <span className={`text-[10px] font-mono font-bold ${isSelected ? 'text-slate-900' : 'text-slate-400'}`}>
+                    0{stage.id}
+                  </span>
                   {isCompleted && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />}
                   {isCurrent && <RotateCw className={`w-3.5 h-3.5 animate-spin ${theme.badgeBg}`} />}
                   {stage.status === 'pending' && <Clock className="w-3.5 h-3.5 text-slate-300" />}
                 </div>
-                <div className="text-xs font-black leading-tight truncate">
-                  {theme.name}
+                <div>
+                  <div className={`text-xs font-black leading-tight ${isSelected ? 'text-slate-900' : 'text-slate-600'}`}>
+                    {theme.name}
+                  </div>
+                  <div className="text-[10px] text-slate-500 font-medium">
+                    {theme.subtitle}
+                  </div>
                 </div>
               </button>
             );
@@ -126,59 +137,62 @@ export const ServicingTracker: React.FC<ServicingTrackerProps> = ({
       </div>
 
       {/* Active Stage Clean Summary */}
-      <div className="p-4 sm:p-5 bg-slate-50">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <div className="text-xs font-black text-slate-900 flex items-center gap-2">
-              <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white font-mono text-[10px]">
-                Stage 0{activeDetailStage.id}
+      <div className="p-4 bg-slate-50">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white font-mono text-[10px] font-bold">
+                Stage {activeDetailStage.id}
               </span>
-              <span>{activeDetailStage.title}</span>
+              <h4 className="text-sm font-black text-slate-900 truncate">
+                {activeDetailStage.title}
+              </h4>
             </div>
-            <p className="text-xs text-slate-600 mt-1 max-w-xl leading-relaxed">
-              {activeDetailStage.description}
+            <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-2">
+              {activeDetailStage.subtitle}
             </p>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
-            {activeDetailStage.id === 1 && (
-              <button
-                onClick={onOpenInspectionModal}
-                className="px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-xs"
-              >
-                <Camera className="w-3.5 h-3.5" />
-                <span>Macro Photos</span>
-              </button>
-            )}
-
-            <button
-              onClick={() => setShowTechnicalDetails(!showTechnicalDetails)}
-              className="px-3 py-2 text-xs font-bold text-slate-700 hover:text-slate-900 bg-white border border-slate-200 rounded-xl transition-all cursor-pointer flex items-center gap-1 shadow-xs"
-            >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-blue-600" />
-              <span>{showTechnicalDetails ? 'Hide Specs' : 'Tech Specs'}</span>
-            </button>
-          </div>
+          <button
+            onClick={() => setShowTechnicalDetails(!showTechnicalDetails)}
+            className="px-3 py-1.5 text-[11px] font-bold text-slate-700 bg-white border border-slate-200 rounded-xl transition-all cursor-pointer flex items-center gap-1 shadow-xs hover:bg-slate-50 shrink-0"
+          >
+            <SlidersHorizontal className="w-3 h-3 text-blue-600" />
+            <span className="hidden sm:inline">{showTechnicalDetails ? 'Hide' : 'Specs'}</span>
+          </button>
         </div>
 
-        {/* Advance Stage Button (if stage is current) */}
-        {activeDetailStage.status === 'current' && (
-          <button
-            onClick={() => onAdvanceStage(activeDetailStage.id)}
-            className="w-full mt-3.5 h-12 bg-[#007AFF] hover:bg-blue-600 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 cursor-pointer shadow-xs active:scale-95 transition-all"
-          >
-            <CheckCircle2 className="w-4 h-4" />
-            <span>Complete Stage 0{activeDetailStage.id} &amp; Advance ➔</span>
-          </button>
-        )}
+        {/* Action Buttons */}
+        <div className="flex items-center gap-2">
+          {activeDetailStage.id === 1 && (
+            <button
+              onClick={onOpenInspectionModal}
+              className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-xs active:scale-95"
+            >
+              <Camera className="w-3.5 h-3.5" />
+              <span>Macro Photos</span>
+            </button>
+          )}
+
+          {activeDetailStage.status === 'current' && (
+            <button
+              onClick={() => onAdvanceStage(activeDetailStage.id)}
+              className="flex-1 px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs active:scale-95 transition-all"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Complete Stage {activeDetailStage.id}</span>
+              <ArrowRight className="w-3 h-3" />
+            </button>
+          )}
+        </div>
 
         {/* Collapsible Technical Matrix */}
         {showTechnicalDetails && (
-          <div className="mt-3.5 pt-3.5 border-t border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono">
-            {activeDetailStage.parameters.map((p, i) => (
-              <div key={i} className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-xs">
-                <span className="text-blue-600 block text-[10px] font-bold uppercase tracking-wider">{p.label}</span>
-                <span className="font-extrabold text-slate-900 mt-0.5 block truncate">{p.value}</span>
+          <div className="mt-3 pt-3 border-t border-slate-200 space-y-2">
+            {activeDetailStage.parameters.slice(0, 4).map((p, i) => (
+              <div key={i} className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200">
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wide">{p.label}</span>
+                <span className="text-[11px] font-black text-slate-900 text-right">{p.value}</span>
               </div>
             ))}
           </div>
