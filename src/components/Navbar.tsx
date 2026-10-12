@@ -34,13 +34,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Brand Wordmark & Clinical Indicator */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#007AFF] text-white flex items-center justify-center shadow-md shadow-blue-500/25 shrink-0">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#2D1B69] text-white flex items-center justify-center shadow-md shadow-purple-900/25 shrink-0">
               <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white stroke-[2.2]" />
             </div>
             <div>
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">LoupeCare</span>
-                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-200/60">
+                <span className="text-[11px] font-bold text-[#2D1B69] bg-purple-50 px-2 py-0.5 rounded-md border border-purple-200/60">
                   For Dental Students
                 </span>
               </div>
@@ -74,12 +74,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>PPD Spec</span>
             </button>
 
-            {/* Subscription Button with Vibrant Amber/Gold Accent */}
+            {/* Subscription Button with Purple Accent */}
             <button
               onClick={onOpenPricing}
-              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-lg transition-all whitespace-nowrap cursor-pointer shadow-xs active:scale-[0.98]"
+              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold text-white bg-[#2D1B69] hover:bg-[#4A3089] rounded-lg transition-all whitespace-nowrap cursor-pointer shadow-xs active:scale-[0.98]"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Sparkles className="w-3.5 h-3.5 text-white" />
               <span className="hidden sm:inline">DuitNow Plans</span>
               <span className="sm:hidden">Plans</span>
             </button>

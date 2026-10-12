@@ -48,14 +48,14 @@ export const IOSNavigationBar: React.FC<IOSNavigationBarProps> = ({
         
         {/* Brand & Large Title */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#007AFF] text-white flex items-center justify-center shrink-0 shadow-xs">
+          <div className="w-8 h-8 rounded-xl bg-[#2D1B69] text-white flex items-center justify-center shrink-0 shadow-xs">
             <ShieldCheck className="w-5 h-5 text-white" />
           </div>
           <div>
             <h1 className="text-base font-extrabold text-slate-900 tracking-tight leading-tight">
               {title}
             </h1>
-            <p className="text-[10px] text-blue-600 font-semibold leading-none mt-0.5">
+            <p className="text-[10px] text-[#2D1B69] font-semibold leading-none mt-0.5">
               {subtitle}
             </p>
           </div>

@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @layer base {
+  /* LoupeCare Brand Colors */
+  :root {
+    --brand-purple: #2D1B69;
+    --brand-purple-light: #4A3089;
+    --brand-purple-dark: #1A0F3F;
+  }
+
   html, body {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
