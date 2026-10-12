@@ -227,7 +227,6 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
         </div>
 
       </div>
-
     </div>
   );
 };
