@@ -44,17 +44,27 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
   const isMaintenanceDue = loupe.currentStatus === 'Maintenance Due';
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 shadow-xs overflow-hidden transition-all">
+    <div className="relative group">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 animate-pulse" />
       
-      {/* Main Asset Header Card */}
-      <div className="p-4 sm:p-5">
+      <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden transition-all hover:shadow-blue-200/50 hover:scale-[1.01] duration-300">
+        
+        {/* Shimmer effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+        
+        {/* Main Asset Header Card */}
+        <div className="p-4 sm:p-5 relative z-10">
         
         {/* Top Identity & Health Score Row - Perfectly Aligned */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-start gap-3 min-w-0">
-            {/* Solid Apple Blue Icon Badge */}
-            <div className="w-12 h-12 rounded-2xl bg-[#007AFF] text-white flex items-center justify-center shrink-0 shadow-xs">
-              <Glasses className="w-6 h-6 text-white stroke-[2.2]" />
+            {/* 3D Floating Icon Badge with glow */}
+            <div className="relative group/icon">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-lg opacity-50 group-hover/icon:opacity-75 transition-opacity animate-pulse" />
+              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-[#007AFF] to-[#5856D6] text-white flex items-center justify-center shrink-0 shadow-xl transform group-hover/icon:scale-110 group-hover/icon:rotate-6 transition-all duration-300">
+                <Glasses className="w-6 h-6 text-white stroke-[2.2] drop-shadow-lg" />
+              </div>
             </div>
 
             <div className="min-w-0">
@@ -96,18 +106,27 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
           </div>
         </div>
 
-        {/* Solid Health Progress Bar */}
-        <div className="mt-3.5 w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+        {/* Animated Gradient Progress Bar with glow */}
+        <div className="mt-3.5 w-full bg-gradient-to-r from-slate-100 to-slate-50 h-3 rounded-full overflow-hidden shadow-inner relative">
           <div 
-            className="h-full rounded-full transition-all duration-700 bg-[#007AFF]"
+            className="h-full rounded-full transition-all duration-700 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 relative overflow-hidden shadow-lg"
+            style={{ width: `${loupe.healthScore}%` }}
+          >
+            {/* Shimmer animation */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
+          </div>
+          {/* Glow effect */}
+          <div 
+            className="absolute top-0 h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-400 blur-md opacity-50 transition-all duration-700"
             style={{ width: `${loupe.healthScore}%` }}
           />
         </div>
 
-        {/* 3 Clean Solid Stats Boxes - Symmetrical Grid */}
-        <div className="grid grid-cols-3 gap-2 mt-3.5 pt-3.5 border-t border-slate-100 text-center">
-          {/* Card 1: Anti-Fog Shield */}
-          <div className="p-2.5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-center items-center h-[62px]">
+        {/* 3 Glassmorphic Stats Cards with hover effects */}
+        <div className="grid grid-cols-3 gap-2 mt-3.5 pt-3.5 border-t border-white/40 text-center">
+          {/* Card 1: Anti-Fog Shield - Glassmorphism */}
+          <div className="relative group/card p-2.5 rounded-2xl bg-gradient-to-br from-cyan-50/80 to-blue-50/80 backdrop-blur-sm border border-cyan-200/50 flex flex-col justify-center items-center h-[62px] hover:scale-105 hover:shadow-lg hover:shadow-cyan-200/50 transition-all duration-300 cursor-pointer">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-cyan-500/10 rounded-2xl opacity-0 group-hover/card:opacity-100 transition-opacity" />
             <div className="text-[10px] text-slate-600 font-medium truncate flex items-center justify-center gap-1 w-full">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
               <span className="truncate">Anti-Fog</span>
@@ -117,8 +136,9 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
             </div>
           </div>
 
-          {/* Card 2: Hinge Torque */}
-          <div className="p-2.5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-center items-center h-[62px]">
+          {/* Card 2: Hinge Torque - Glassmorphism */}
+          <div className="relative group/card p-2.5 rounded-2xl bg-gradient-to-br from-purple-50/80 to-pink-50/80 backdrop-blur-sm border border-purple-200/50 flex flex-col justify-center items-center h-[62px] hover:scale-105 hover:shadow-lg hover:shadow-purple-200/50 transition-all duration-300 cursor-pointer">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/10 rounded-2xl opacity-0 group-hover/card:opacity-100 transition-opacity" />
             <div className="text-[10px] text-slate-600 font-medium truncate flex items-center justify-center gap-1 w-full">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-600 shrink-0" />
               <span className="truncate">Torque</span>
@@ -128,8 +148,9 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
             </div>
           </div>
 
-          {/* Card 3: Last Service */}
-          <div className="p-2.5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-center items-center h-[62px]">
+          {/* Card 3: Last Service - Glassmorphism */}
+          <div className="relative group/card p-2.5 rounded-2xl bg-gradient-to-br from-emerald-50/80 to-teal-50/80 backdrop-blur-sm border border-emerald-200/50 flex flex-col justify-center items-center h-[62px] hover:scale-105 hover:shadow-lg hover:shadow-emerald-200/50 transition-all duration-300 cursor-pointer">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-emerald-500/10 rounded-2xl opacity-0 group-hover/card:opacity-100 transition-opacity" />
             <div className="text-[10px] text-slate-600 font-medium truncate flex items-center justify-center gap-1 w-full">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
               <span className="truncate">Serviced</span>
@@ -140,13 +161,16 @@ export const AssetOverview: React.FC<AssetOverviewProps> = ({
           </div>
         </div>
 
-        {/* Solid Primary Action Button */}
-        <div className="mt-3.5">
+        {/* 3D Gradient Action Button with pulse effect */}
+        <div className="mt-3.5 relative">
           {isReadyForPickup ? (
             <button
               onClick={onOpenPickupModal}
-              className="w-full h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
+              className="relative w-full h-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white rounded-2xl font-bold text-xs sm:text-sm shadow-xl shadow-emerald-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 overflow-hidden group/btn"
             >
+              {/* Animated shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/20 to-emerald-400/0 animate-pulse" />
               <PackageCheck className="w-4 h-4 text-white shrink-0" />
               <span>Retrieve Serviced Loupe from Locker #04</span>
             </button>
