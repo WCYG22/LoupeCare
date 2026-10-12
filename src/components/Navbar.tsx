@@ -40,35 +40,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div>
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">LoupeCare</span>
-                <span className="hidden md:inline text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-200/60">
-                  Track A · IMU
+                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-200/60">
+                  For Dental Students
                 </span>
               </div>
             </div>
-          </div>
-
-          {/* Role Switcher - Compact on Mobile */}
-          <div className="flex items-center bg-slate-100 p-0.5 sm:p-1 rounded-xl border border-slate-200/80">
-            <button
-              onClick={() => onRoleChange('student')}
-              className={`px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
-                currentRole === 'student'
-                  ? 'bg-indigo-600 text-white shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <span className="hidden sm:inline">Dental </span>Student
-            </button>
-            <button
-              onClick={() => onRoleChange('clinician')}
-              className={`px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
-                currentRole === 'clinician'
-                  ? 'bg-indigo-600 text-white shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <span className="hidden sm:inline">Graduate </span>Dentist
-            </button>
           </div>
 
           {/* Right Action Tools: Desktop & Mobile Triggers */}

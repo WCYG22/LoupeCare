@@ -94,31 +94,6 @@ export const IOSNavigationBar: React.FC<IOSNavigationBarProps> = ({
 
       </div>
 
-      {/* iOS Segmented Control - 2-Column Grid for Student/Clinician */}
-      <div className="mt-2.5 bg-slate-100 p-1 rounded-xl grid grid-cols-2 gap-1 border border-slate-200 text-center">
-        <button
-          onClick={() => handleRoleSelect('student')}
-          className={`h-8 flex items-center justify-center text-[11px] rounded-lg transition-all cursor-pointer truncate ${
-            currentRole === 'student'
-              ? 'bg-white text-slate-900 font-bold shadow-xs'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
-          }`}
-        >
-          Dental Student (BDS)
-        </button>
-
-        <button
-          onClick={() => handleRoleSelect('clinician')}
-          className={`h-8 flex items-center justify-center text-[11px] rounded-lg transition-all cursor-pointer truncate ${
-            currentRole === 'clinician'
-              ? 'bg-white text-slate-900 font-bold shadow-xs'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
-          }`}
-        >
-          Graduate Dentist
-        </button>
-      </div>
-
     </div>
   );
 };
