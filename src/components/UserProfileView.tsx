@@ -84,37 +84,6 @@ export const UserProfileView: React.FC<UserProfileViewProps> = ({
             </div>
           </div>
         </div>
-
-        {/* Quick Role Switcher Inside Profile */}
-        <div className="mt-3.5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-          <span className="text-slate-500 text-[11px] font-bold">Switch Identity:</span>
-          <div className="flex bg-slate-100 p-0.5 rounded-xl border border-slate-200 text-center">
-            <button
-              onClick={() => onRoleChange('student')}
-              className={`px-2.5 py-1 text-[10px] font-bold rounded-lg transition-all cursor-pointer ${
-                currentRole === 'student' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              Student
-            </button>
-            <button
-              onClick={() => onRoleChange('clinician')}
-              className={`px-2.5 py-1 text-[10px] font-bold rounded-lg transition-all cursor-pointer ${
-                currentRole === 'clinician' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              Doctor
-            </button>
-            <button
-              onClick={() => onRoleChange('admin')}
-              className={`px-2.5 py-1 text-[10px] font-bold rounded-lg transition-all cursor-pointer ${
-                currentRole === 'admin' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              Admin
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* 2. LoupeCare Subscription & Quota Card */}
