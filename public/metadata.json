@@ -1,6 +1,6 @@
 {
-  "name": "LoupeCare - Clinical Optical Maintenance & Practice Management Portal",
-  "description": "Technical Specification, Operational Blueprint & Practice Management Platform for Dental Surgical Optics Maintenance, IoT Smart Lockers & MOH Biosecurity Compliance.",
+  "name": "LoupeCare - Student Loupe Maintenance",
+  "description": "Malaysia's first loupe maintenance service built for dental students. Campus smart lockers, 24hr turnaround, backup loupes during service. From RM 19 for BDS students at IMU, UM, UKM, UiTM.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
