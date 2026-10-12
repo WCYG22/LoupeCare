@@ -1,10 +1,10 @@
-# LoupeCare - Clinical Optical Maintenance & Practice Management
+# LoupeCare - Malaysia's First Loupe Maintenance Built for Dental Students
 
 <div align="center">
   <img src="./public/pwa-512x512.png" alt="LoupeCare Logo" width="120" />
   
-  <h3>Professional Surgical Loupe Maintenance Service</h3>
-  <p>Subscription-based cleaning, anti-fog coating, decontamination and maintenance for dental loupes</p>
+  <h3>🎓 Student Loupe Maintenance at Campus Smart Lockers</h3>
+  <p>24hr Turnaround • Backup Loupes During Service • From RM 19/Service</p>
   
   [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 </div>
@@ -13,13 +13,28 @@
 
 ## 🎯 About LoupeCare
 
-LoupeCare is a subscription-based service providing professional cleaning, anti-fog coating, decontamination, and minor maintenance for dental surgical loupes, targeting dental students and young dentists in Malaysia.
+**LoupeCare is the first loupe maintenance service designed specifically for Malaysian dental students.** We solve the #1 problem BDS students face: their RM 3,500–12,000 surgical loupes fog up during clinicals, hinges loosen mid-procedure, and traditional servicing costs RM 150–300 with 5–7 day turnaround that conflicts with exam schedules.
+
+### 🚨 The Student Problem We Solve
+
+**Before LoupeCare:**
+- ❌ Traditional opticians charge RM 150–300 per service (unaffordable for students)
+- ❌ 5–7 day turnaround = missed clinical sessions during exams
+- ❌ Alcohol wipes damage anti-fog coatings (students don't know better)
+- ❌ No backup loupes = forced to skip procedures worth 20% of BDS grades
+
+**After LoupeCare:**
+- ✅ Student pricing: RM 19 trial, RM 79/semester, RM 149/year (saves RM 200–400 annually)
+- ✅ Campus smart locker drop-off + 24hr turnaround = zero downtime
+- ✅ Free backup loupe during service = never miss a clinical session
+- ✅ Proper nano-coating + ultrasonic cleaning = loupes last 2x longer
 
 ### 🎓 Academic Context
 - **Institution**: International Medical University (IMU) Dentistry
 - **Programme**: Track A - Healthcare Practice Innovation & Clinical Support Services
 - **Module**: Personal and Professional Development (PPD) – CHW Entrepreneurship
 - **Cohort**: Semesters 8–10 BDS Programme
+- **Target Market**: Year 3-5 BDS students at IMU, UM, UKM, UiTM (1,200 students total)
 
 ---
 
@@ -27,40 +42,51 @@ LoupeCare is a subscription-based service providing professional cleaning, anti-
 
 ### 📱 **Mobile-First Progressive Web App**
 - Full iOS and Android PWA support
-- Installable on home screen
-- Offline functionality
-- Push notifications
-- Native app feel with iOS design patterns
+- Installable on home screen (no App Store needed)
+- Offline functionality for clinical areas with poor WiFi
+- Push notifications for "Your loupe is ready!"
+- Native iOS design (built by students, for students)
 
-### 🔬 **4-Stage Service Tracking**
-1. **Stage 1**: Contactless Drop & 10-Point Pre-Inspection
-2. **Stage 2**: Isolated Cavitation Decontamination (MOH compliant)
-3. **Stage 3**: Hydrophobic Nano-Shield Bonding
-4. **Stage 4**: Micro-Torque Calibration & Locker Return
+### 🎓 **Student-Focused Service Model**
+- **Campus Smart Lockers**: Drop-off at IMU, UM, UKM, UiTM dental lounges 24/7
+- **24hr Express Turnaround**: Submit Monday 9am → Pickup Tuesday 9am
+- **Exam Week Priority**: Guaranteed same-day service during midterms/finals
+- **Free Backup Loupes**: Emergency loaners while yours is being serviced
+- **Student ID Verification**: Exclusive pricing for matriculated BDS students
 
-### 🏥 **MOH Compliance**
-- Ministry of Health infection control guidelines
+### 🔬 **4-Stage Clean-Room Service**
+1. **Stage 1**: Campus Locker Drop-off & 10-Point Digital Inspection
+2. **Stage 2**: Ultrasonic Enzymatic Decon (MOH compliant, prism-safe)
+3. **Stage 3**: Hydrophobic Nano-Coating (45–60 days fog-free)
+4. **Stage 4**: Hinge Micro-Torque Calibration & Sterile Packaging
+
+### 🏥 **MOH Compliance for Clinical Portfolios**
+- Digital certificate for every service (required for clinic audits)
 - Medical Device Authority (MDA) Malaysia compliance
-- ISO 6789 micro-fastener calibration standards
-- Audit-ready documentation
-
-### ⚡ **Zero-Downtime Service**
-- Emergency backup loaner fleet
-- Smart IoT locker integration at 4 campus locations:
-  - IMU Bukit Jalil
-  - UM Faculty of Dentistry
-  - UKM Kampus KL
-  - UiTM Sungai Buloh
+- ISO 6789 calibration standards
+- Perfect for BDS portfolio submissions
 
 ---
 
-## 💰 Subscription Plans
+## 💰 Student Pricing Plans
 
-| Plan | Target Audience | Price | Services/Year |
-|------|----------------|-------|---------------|
-| **Student Semester Pass** | BDS Students | RM 79/semester | 2 services |
-| **Clinician Pro Annual** | Young Dentists | RM 249/year | 6 services + courier |
-| **Enterprise Retainer** | Dental Clinics | RM 180/doctor/year | 6 services + dedicated support |
+| Plan | Best For | Price | Services | Key Benefits |
+|------|----------|-------|----------|--------------|
+| **🔥 First-Timer Trial** | Year 3-4 students trying us out | **RM 19** | 1 service | Try once, free backup loupe, student ID required |
+| **🎓 Semester Pass** | Most popular for BDS students | **RM 79/sem** | 2 services | Before midterms & finals, 24hr express, unlimited backup reserves |
+| **💎 Annual All-Access** | Year 4-5 heavy clinical load | **RM 149/year** | 4 services | Quarterly servicing, exam week priority, refer-a-friend RM 20 credit |
+| **👨‍⚕️ Graduate Plan** | New grads, house officers | **RM 249/year** | 6 services | Clinic courier pickup, professional MOH logs |
+
+### Why Students Choose Us Over Traditional Opticians
+
+| Traditional Optician | LoupeCare Student Plan |
+|---------------------|------------------------|
+| RM 150-300 per service | RM 19-79 (save RM 200+ annually) |
+| 5-7 day turnaround | 24hr express (48hr during exams) |
+| Must courier or drive to shop | Campus smart locker 24/7 |
+| No backup = miss clinical sessions | Free backup loupe included |
+| Alcohol wipes damage coating | Proper ultrasonic + nano-coating |
+| No MOH certificate | Digital certificate for portfolio |
 
 ---
 
@@ -234,24 +260,32 @@ loupecare/
 
 ---
 
-## 📊 Business Model
+## 📊 Business Model (Student-Focused)
 
-### Value Proposition
-- **Asset Longevity**: Doubles lifespan of RM 3,500–12,000 equipment
-- **Zero Downtime**: Eliminates fogging during procedures
-- **MOH Compliance**: Standardized decontamination protocols
+### Target Market
+- **Primary**: Year 3-5 BDS students at IMU Bukit Jalil, UM, UKM, UiTM
+- **Total Addressable Market**: ~1,200 BDS students across 4 major dental schools
+- **Year 1 Goal**: 350 student subscribers (29% penetration at IMU pilot)
+- **Year 2 Expansion**: 850 students across all 4 campuses
+
+### Why This Niche Works
+1. **Students are price-sensitive but must have loupes** (required for clinicals worth 20% of grades)
+2. **Concentrated on 4 campuses** = low customer acquisition cost via WhatsApp groups
+3. **High switching cost once subscribed** = loupes are registered in our system
+4. **Natural upgrade path** = students become clinicians who pay 3x more
+
+### Go-to-Market Strategy
+- **Phase 1 (Month 1-3)**: Pilot with 50 Year 4-5 students at IMU Bukit Jalil
+- **Phase 2 (Month 4-6)**: Expand to all IMU BDS cohorts via campus ambassadors
+- **Phase 3 (Month 7-12)**: Launch at UM, UKM, UiTM via student society partnerships
+- **Channels**: WhatsApp groups, Instagram reels, clinical orientation week demos
 
 ### Unit Economics
-- COGS per service: RM 4.80
-- Gross margin: 82-85%
-- Breakeven: Month 4 (165 users)
-
-### Seed Capital
-- Total: RM 25,000
-- Equipment: RM 11,000 (44%)
-- IoT Lockers: RM 5,000 (20%)
-- Consumables: RM 5,000 (20%)
-- Tech & Insurance: RM 4,000 (16%)
+- **COGS per service**: RM 4.80 (reagents + nano-polymer + screws + packaging)
+- **Average revenue per service**: RM 39.50
+- **Gross margin**: 88% (student-focused efficiency)
+- **Breakeven**: Month 4 at 120 paying students
+- **Year 1 Projection**: 350 students × RM 138 avg = **RM 48,500 ARR**, **RM 18,500 net profit**
 
 ---
 
@@ -278,6 +312,7 @@ This project is part of an academic entrepreneurship module at IMU Dentistry.
 ---
 
 <div align="center">
-  <p><strong>LoupeCare</strong> - Professional Optical Maintenance for Clinical Excellence</p>
-  <p>Built with ❤️ for Malaysian dental professionals</p>
+  <p><strong>LoupeCare</strong> - Malaysia's First Loupe Maintenance Built for Dental Students</p>
+  <p>🎓 Built by a BDS student, for BDS students</p>
+  <p>📍 IMU Bukit Jalil • UM • UKM • UiTM</p>
 </div>
