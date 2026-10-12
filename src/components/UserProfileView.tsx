@@ -41,6 +41,7 @@ export const UserProfileView: React.FC<UserProfileViewProps> = ({
   onOpenPrdSpec,
   onOpenHelp,
   onOpenPublishModal,
+  onReplayOnboarding,
 }) => {
   const user = MOCK_USERS[currentRole];
 

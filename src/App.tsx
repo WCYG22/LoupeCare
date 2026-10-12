@@ -30,6 +30,7 @@ import { PushNotificationBanner } from './components/PushNotificationBanner';
 import { NotificationCenterModal } from './components/NotificationCenterModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { LoadingScreen } from './components/LoadingScreen';
+import { OnboardingScreen } from './components/OnboardingScreen';
 import { UserProfileView } from './components/UserProfileView';
 import { PWAInstallButton } from './components/PWAInstallButton';
 import { OfflineIndicator } from './components/OfflineIndicator';
@@ -109,6 +110,11 @@ export default function App() {
   });
   const [activeTab, setActiveTab] = useState<'loupe' | 'tracker' | 'loaners' | 'profile'>('loupe');
   const [isLoading, setIsLoading] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    // Check if user has seen onboarding before
+    const hasSeenOnboarding = localStorage.getItem('hasSeenOnboarding');
+    return !hasSeenOnboarding;
+  });
 
   // Loupe Asset state depending on role
   const [studentLoupe, setStudentLoupe] = useState<RegisteredLoupe>(INITIAL_STUDENT_LOUPE);
@@ -530,9 +536,14 @@ export default function App() {
             }
           }}
         >
-          {/* Inside iPhone: Interactive Loading Screen */}
+          {/* Inside iPhone: Loading → Onboarding → Main App */}
           {isLoading ? (
             <LoadingScreen onComplete={() => setIsLoading(false)} />
+          ) : showOnboarding ? (
+            <OnboardingScreen onComplete={() => {
+              setShowOnboarding(false);
+              localStorage.setItem('hasSeenOnboarding', 'true');
+            }} />
           ) : (
             <div className="flex-1 flex flex-col h-full bg-slate-50 relative overflow-hidden">
               
@@ -667,6 +678,7 @@ export default function App() {
                     onOpenPrdSpec={() => setIsPrdSpecOpen(true)}
                     onOpenHelp={() => setIsHelpModalOpen(true)}
                     onOpenPublishModal={() => setIsPublishModalOpen(true)}
+                    onReplayOnboarding={() => setShowOnboarding(true)}
                   />
                 )}
 
