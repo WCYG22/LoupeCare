@@ -94,8 +94,8 @@ export const IOSNavigationBar: React.FC<IOSNavigationBarProps> = ({
 
       </div>
 
-      {/* iOS Segmented Control - Perfectly Aligned 3-Column Grid */}
-      <div className="mt-2.5 bg-slate-100 p-1 rounded-xl grid grid-cols-3 gap-1 border border-slate-200 text-center">
+      {/* iOS Segmented Control - 2-Column Grid for Student/Clinician */}
+      <div className="mt-2.5 bg-slate-100 p-1 rounded-xl grid grid-cols-2 gap-1 border border-slate-200 text-center">
         <button
           onClick={() => handleRoleSelect('student')}
           className={`h-8 flex items-center justify-center text-[11px] rounded-lg transition-all cursor-pointer truncate ${
@@ -104,7 +104,7 @@ export const IOSNavigationBar: React.FC<IOSNavigationBarProps> = ({
               : 'text-slate-500 hover:text-slate-800 font-medium'
           }`}
         >
-          Student
+          Dental Student (BDS)
         </button>
 
         <button
@@ -115,18 +115,7 @@ export const IOSNavigationBar: React.FC<IOSNavigationBarProps> = ({
               : 'text-slate-500 hover:text-slate-800 font-medium'
           }`}
         >
-          Clinician
-        </button>
-
-        <button
-          onClick={() => handleRoleSelect('admin')}
-          className={`h-8 flex items-center justify-center text-[11px] rounded-lg transition-all cursor-pointer truncate ${
-            currentRole === 'admin'
-              ? 'bg-white text-slate-900 font-bold shadow-xs'
-              : 'text-slate-500 hover:text-slate-800 font-medium'
-          }`}
-        >
-          Admin
+          Graduate Dentist
         </button>
       </div>
 

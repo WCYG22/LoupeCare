@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center bg-slate-100 p-0.5 sm:p-1 rounded-xl border border-slate-200/80">
             <button
               onClick={() => onRoleChange('student')}
-              className={`px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
+              className={`px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
                 currentRole === 'student'
                   ? 'bg-indigo-600 text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
@@ -61,23 +61,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => onRoleChange('clinician')}
-              className={`px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
+              className={`px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
                 currentRole === 'clinician'
                   ? 'bg-indigo-600 text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <span className="hidden sm:inline">Private </span>Doctor
-            </button>
-            <button
-              onClick={() => onRoleChange('admin')}
-              className={`px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] sm:text-xs font-bold rounded-lg transition-all whitespace-nowrap cursor-pointer ${
-                currentRole === 'admin'
-                  ? 'bg-purple-600 text-white shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              Admin
+              <span className="hidden sm:inline">Graduate </span>Dentist
             </button>
           </div>
 
